@@ -28,13 +28,13 @@ def load_data():
     :return: DataFrame con los datos cargados y la columna 'time' como índice.
     """
     try:
-        # Cargar los datos desde el archivo CSV
+        # Cargamos los datos desde el archivo CSV
         df = pd.read_csv('datos_energia.csv')
         
-        # Convertir la columna 'time' al formato datetime
+        # Convertimos la columna 'time' al formato datetime
         df['time'] = pd.to_datetime(df['time'])
         
-        # Establecer la columna 'time' como índice
+        # Establecemos la columna 'time' como índice
         df.set_index('time', inplace=True)
         
         return df
